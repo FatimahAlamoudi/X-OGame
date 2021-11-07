@@ -1,0 +1,127 @@
+<!DOCTYPE html dir="rtl" lang="ar">
+<meta charset="UTF-8">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	 <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+		<div class="modal-body">
+		  <p id="winner"></p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="container justify-content-center text-center">
+		<h1 class='outline mt-5'>X & O لعبة</h1>
+		<h1 class="outline mt-3">النقاط</h1>
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-success mb-5" data-toggle="modal" data-target="#exampleModalCenter">
+	طريقة اللعبة
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLongTitle">طريقة اللعبة</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		   <p>اللعبة هي نفسها لعبةاكس او اوه التقليدية لكن طريقة هذي اللعبة ان في فريقين الفريق الأصفر والفريق الأزرق وكل ما يفوز فريق تزيد عنده مجموع النقاط الظاهر في المربع الخاص فيه وتقدر تعيد اللعبة من جديد بالضغط على زر اعيد اللعبة </p>
+		   <br>
+		   <p>🤩 يلا نشوف مين راح يفوز </p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+	<div class="result">
+		<button type="button" id="player1Result" class="btn btn-lg player1Color mb-5 mx-5" disabled></button>
+		<button type="button" id="player2Result" class="btn btn-lg player2Color mb-5 mx-5" disabled></button>
+	</div>
+	<div class="row">
+	<div class="col">
+		<span id="player11" class="player1Avatar"></span>
+		<span id="player12" class="player1Avatar"></span>
+		<span id="player13" class="player1Avatar"></span>
+		<span id="player14" class="player1Avatar"></span>
+	</div>
+		
+	<div class="col justify-content-center">
+	<div class="row">
+		<input type="text" id="b1" onclick=
+			"myfunc_3(); myfunc();" readonly>
+		<input type="text" id="b2" onclick=
+			"myfunc_4(); myfunc();" readonly>
+		<input type="text" id="b3" onclick=
+			"myfunc_5(); myfunc();" readonly>
+	</div>
+		<br><br>
+		<!-- <hr class="hrDivider"> -->
+	<div class="row">
+		<input type="text" id="b4" onclick=
+			"myfunc_6(); myfunc();" readonly>
+			
+		<input type="text" id="b5" onclick=
+			"myfunc_7(); myfunc();" readonly>
+
+		<input type="text" id="b6" onclick=
+			"myfunc_8(); myfunc();" readonly>
+	</div>
+	    <br><br>
+		<!-- <hr class="hrDivider"> -->
+        
+	<div class="row">
+		<input type="text" id="b7" onclick=
+			"myfunc_9(); myfunc();" readonly>
+
+		<input type="text" id="b8" onclick=
+			"myfunc_10();myfunc();" readonly>
+
+		<input type="text" id="b9" onclick=
+			"myfunc_11();myfunc();" readonly>
+	</div>
+		<br><br>
+		<!-- <hr class="hrDivider"> -->
+
+		<button class="btn btn-success" id="replay">
+			اعيد اللعبة 
+		</button>
+
+		<br><br>
+		<p id="print"></p>
+	</div>
+	<div class="col">
+		<span id="player21" class="player2Avatar"></span>
+		<span id="player22" class="player2Avatar"></span>
+		<span id="player23" class="player2Avatar"></span>
+		<span id="player24" class="player2Avatar"></span>
+	</div>
+</div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+
+</html>

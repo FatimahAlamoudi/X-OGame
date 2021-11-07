@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;700&display=swap');
+
+	body{ /* change background color and font-family */
+		background-color: #F8F5F1;
+		font-family: 'Changa';
+	}
+
+	.player1Color /* intiliaze player1 color */
+	{
+		background-color: #FFC800 ;
+		color: #023047;
+	}
+
+	.player2Color /* intiliaze player2 color */
+	{
+		background-color: #49CCF9;
+		color: #023047;
+	}
+	
+	.player1Avatar { /* intiliaze player1 avatar */
+		height: 70px;
+		width: 70px;
+		margin-bottom: 50px;
+		background-color: #FFC800 ;
+		border-radius: 50%;
+		display: flex;
+	  }
+
+	.player2Avatar { /* intiliaze player2 avatar */
+		height: 70px;
+		width: 70px;
+		margin-bottom: 50px;
+		background-color: #49CCF9 ;
+		border-radius: 50%;
+		display: flex;
+	  }
+
+	#b1, #b2, #b3, #b4, #b5, /* styling for the game boxes */
+	#b6, #b7, #b8, #b9 {
+		width: 80px;
+		height: 52px;
+		border-radius: 6px;
+		font-size: 30px;
+		text-align: center;
+		background-color: none;
+		cursor: pointer;
+		margin: 0 auto !important;
+   		float: none !important;
+	}
+
+	
+
+	
+	#print { /* Player turn */
+		font-size: 20px;
+	}
+
+	span{
+		float:none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.outline {	/* Game Instruction Text */			
+		color: #023047;
+	}
+
